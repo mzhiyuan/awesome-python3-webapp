@@ -37,6 +37,7 @@ def post(path):
         return wrapper
     return decorator
 
+# 获取必须的参数，排除默认参数
 def get_required_kw_args(fn):
     args = []
     params = inspect.signature(fn).parameters
